@@ -125,10 +125,10 @@ function init3DBackground() {
         positions[i + 1] = (Math.random() - 0.5) * 20;
         positions[i + 2] = (Math.random() - 0.5) * 20;
         
-        // Gold particles (#F2A900)
-        colors[i] = 0.95; // R
-        colors[i + 1] = 0.66; // G
-        colors[i + 2] = 0.00; // B
+        // Muted Gold particles (#C9A24A)
+        colors[i] = 0.79; // R
+        colors[i + 1] = 0.64; // G
+        colors[i + 2] = 0.29; // B
     }
     
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
