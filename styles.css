@@ -6,14 +6,120 @@
 }
 
 :root {
-    --primary-green: #39D353;
-    --deep-charcoal: #1a1a1a;
-    --emerald: #008080;
-    --cream: #f8f6f0;
-    --shadow-dark: rgba(0, 0, 0, 0.8);
-    --shadow-light: rgba(0, 0, 0, 0.3);
-    --glow-green: rgba(57, 211, 83, 0.35);
+  --bg-dark-forest: #0B4E3E;
+  --accent-gold: #C89F53;
+  --text-off-white: #DCE2DC;
+
+  /* Theme mappings for site components */
+  --primary-green: var(--accent-gold);
+  --deep-charcoal: var(--bg-dark-forest);
+  --emerald: var(--accent-gold);
+  --cream: #083c30;
+  --shadow-dark: rgba(0, 0, 0, 0.8);
+  --shadow-light: rgba(11, 78, 62, 0.3);
+  --glow-green: rgba(200, 159, 83, 0.35);
 }
+
+/* 1. Page Background */
+body, 
+header, 
+nav, 
+.hero-section, 
+.container {
+  background-color: var(--bg-dark-forest) !important;
+}
+
+/* 2. Text Colors */
+body, 
+.hero-description, 
+nav a, 
+.phone-number, 
+.sub-headline,
+.hero p,
+.story-text p,
+.reservation-info p {
+  color: var(--text-off-white) !important;
+}
+
+/* 2b. Dark Text for Cards & Content Sections */
+.dish-content p,
+.dish-content h3,
+.featured-dishes .section-subtitle,
+.testimonial-content p,
+.testimonial-author h4 {
+  color: #0B4E3E !important;
+}
+
+/* 3. Gold Accent Text (Logo, Italic Accent 'Culinary', Active Nav Links) */
+.logo-title,
+.brand-name,
+.logo-text,
+.hero-subtitle,
+nav a.active,
+nav a:hover,
+.nav-link.active,
+.nav-link:hover,
+.accent-text,
+.italic-title,
+.phone-icon,
+.phone-number i {
+  color: var(--accent-gold) !important;
+  border-bottom-color: var(--accent-gold) !important;
+}
+
+/* 4. Primary Buttons (e.g., 'RESERVE TABLE', 'BOOK EXPERIENCE') */
+.btn-primary,
+.reserve-btn,
+.book-btn,
+.cta-primary,
+button[type="submit"] {
+  background-color: var(--accent-gold) !important;
+  color: #0B4E3E !important; /* Dark text on gold for strong contrast & readability */
+  border-color: var(--accent-gold) !important;
+}
+
+.btn-primary:hover,
+.reserve-btn:hover,
+.book-btn:hover,
+.cta-primary:hover {
+  background-color: #b58d44 !important;
+  border-color: #b58d44 !important;
+  color: #0B4E3E !important;
+}
+
+/* 5. Secondary / Outline Buttons (e.g., 'VIEW MENU') */
+.btn-secondary,
+.btn-outline,
+.view-menu-btn,
+.cta-secondary {
+  border: 1px solid var(--text-off-white) !important;
+  color: var(--text-off-white) !important;
+  background-color: transparent !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover,
+.view-menu-btn:hover,
+.cta-secondary:hover {
+  background-color: var(--text-off-white) !important;
+  color: var(--bg-dark-forest) !important;
+}
+
+/* 6. Hero Image Container / Accent Borders & Scroll Arrows */
+.image-wrapper,
+.card-frame,
+.hero-image-container {
+  border-color: rgba(200, 159, 83, 0.25) !important; /* Subtle gold outline */
+}
+
+.scroll-down-arrow,
+.chevron-down,
+.scroll-arrow {
+  stroke: var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+  border-color: var(--accent-gold) !important;
+}
+
 
 body {
     font-family: 'Lora', serif;
@@ -583,7 +689,7 @@ body {
 }
 
 .dish-content p {
-    color: #666;
+    color: #0B4E3E !important;
     line-height: 1.6;
     margin-bottom: 25px;
 }
@@ -827,7 +933,7 @@ body {
 .testimonial-content p {
     font-size: 1.3rem;
     line-height: 1.6;
-    color: var(--deep-charcoal);
+    color: #0B4E3E !important;
     margin-bottom: 30px;
     font-style: italic;
 }
@@ -835,7 +941,7 @@ body {
 .testimonial-author h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
-    color: var(--deep-charcoal);
+    color: #0B4E3E !important;
     margin-bottom: 5px;
 }
 
